@@ -1,30 +1,60 @@
-# React + TypeScript + Vite
+# To-Do APP
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Table of Contents
 
-Currently, two official plugins are available:
+- [About](#about)
+- [Features](#features)
+- [Requirements](#requirements)
+- [Installation](#installation)
+- [Usage](#usage)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## About
 
-## Expanding the ESLint configuration
+This Todo app is a simple yet powerful task management application designed to help users organize their daily activities efficiently. The app provides an intuitive interface for creating, editing, and managing tasks effortlessly.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Features:
 
-- Configure the top-level `parserOptions` property like this:
+Task Creation: Add new tasks with ease and set specific details for each task.
+Task Management: Edit, mark as completed, or delete tasks as needed.
+Drag-and-Drop: Reorder tasks effortlessly through intuitive drag-and-drop functionality.
+Local Storage: Persistently stores tasks locally to ensure data remains accessible across sessions.
+Cross-Device Compatibility: Responsive design ensures usability across various devices and screen sizes.
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+## Requirements
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Before you begin, ensure you have met the following requirements:
+
+- [Node.js](https://nodejs.org/): Make sure Node.js is installed on your system.
+- [Yarn](https://yarnpkg.com/): Make sure Yarn is installed on your system.
+
+## Installation
+
+Follow these steps to set up and run your frontend project:
+
+1. Clone the repository:
+
+   ```bash
+   git clone git@github.com:guerrerocing/react-to-do-list.git
+   ```
+
+2. Navigate to the project directory:
+
+   ```bash
+   cd react-to-do-list
+   ```
+
+3. Install the project dependencies:
+
+   ```bash
+   yarn install
+   ```
+
+## Usage
+
+1. Start the project:
+
+   ```bash
+   yarn dev
+   ```
+
+2. Access your browser `http://localhost:5173`
