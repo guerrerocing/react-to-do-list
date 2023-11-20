@@ -17,6 +17,7 @@ import { Todo } from "../../types/types";
 
 const ToDoView = () => {
   const [editMode, setEditMode] = useState<boolean>(false);
+  const [error, setError] = useState<boolean>(false);
   const { isOpen, onOpen, onClose, onOpenChange } = useDisclosure();
   const [toDo, setToDo] = useState<Todo>({
     id: 0,
@@ -45,6 +46,10 @@ const ToDoView = () => {
       );
       setTodos(updatedTodos);
     } else {
+      if (toDo.title.length == 0) {
+        setError(true);
+        return;
+      }
       setTodos([...todos, { ...toDo, id: todos.length + 1 }]);
     }
     clearForm();
@@ -53,6 +58,7 @@ const ToDoView = () => {
 
   //Clear ToDoForm
   const clearForm = () => {
+    setError(false);
     setToDo({ id: 0, description: "", title: "", completed: false });
   };
 
@@ -163,6 +169,10 @@ const ToDoView = () => {
                   title={toDo.title}
                   description={toDo.description}
                 />
+
+                {error && (
+                  <p className="text-danger">Title Field is required!</p>
+                )}
               </ModalBody>
               <ModalFooter>
                 <Button
